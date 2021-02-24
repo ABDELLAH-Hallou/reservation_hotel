@@ -4,20 +4,11 @@
 <!DOCTYPE html>
 <html>
 <?php include('templates/header.php'); ?>
-<h4 class="center grey-text">PHP!</h4>
+<h4 class="center grey-text">Hotel " ? "!</h4>
 <div class="container">
-	<figure class="uitk-image heroImageFigure">
-		<div class="uitk-image-placeholder">
-			<img alt="" class="uitk-image-media" src="https://bit.ly/3dfyiwl">
-		</div>
-		<figcaption class="uitk-scrim fade-bottom">
-			<div class="uitk-layout-position heroImageHeadings uitk-layout-position-bottom-zero uitk-layout-position-absolute uitk-spacing uitk-spacing-padding-inline-six uitk-spacing-padding-block-six"> 
-				<div class="heroImageHeadings">
-					<h1 class="uitk-type-display-800">Notre Hôtels</h1>
-				</div> 
-			</div>
-		</figcaption>
-	</figure>
+	<div class=" container">
+		<img style="width:100%;" src="https://bit.ly/3dfyiwl">
+	</div>
 	<div>
 		<div>
 			<label for="start-time">Date de début:</label>
@@ -27,79 +18,65 @@
 			<label for="end-time">Date de fin:</label>
 			<input type="datetime-local" id="end-time" name="end-time" onclick='endDate();'>
 		</div>
-		<!-- hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh -->
 		
 
 
 
 
 
-		<div>
-
-			<div class="float-right" style="width: 300px;">
-				<div>
-					<h3 class="uitk-type-heading-500">Voyageurs</h3>
-				</div>
-				<section>
-					<div>
-						<h3>
-							<span aria-hidden="true">Chambre </span> <!-- nombre de chambre -->
-						</h3>
+		<div class="float-right row">
+			<div style="width: 300px;" class="col-sm">
+				<div><h3>Voyageurs</h3></div>
+				<div class="container">
+					<section>
 						<div>
-							<label for="adult-input-0">Adultes</label>
-							<div class="d-flex flex-row">
-								<button type="button" class="btnPM">
-									<svg height="100%" role="img" viewBox="0 0 24 24" width="100%">
-										<svg>
-											<path d="M19 13H5v-2h14v2z"></path>
-										</svg>
-									</svg>
-								</button>
-								<input type="text" id="adult-input" min="1" max="14" value="0">
-								<button type="button" class="btnPM">
-									<svg height="100%" role="img" viewBox="0 0 24 24" width="100%">
-										<svg>
-											<path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
-										</svg>
-									</svg>
-								</button>
+							<h3><span aria-hidden="true">Chambre </span> <!-- nombre de chambre --></h3>
+							<div>
+								<label for="adult">Adultes</label>
+								<input class="input-group-field" type="number" name="quantity" min="0" max="5" value="0">
+							</div>
+							<div >
+								<label for="child">Enfants<span> De 0 à 17 ans</span></label>
+								<input class="input-group-field" type="number" name="quantity" min="0" max="3" value="0">
 							</div>
 						</div>
-						<div >
-							<label for="child-input-0">Enfants
-								<span>De 0 à&nbsp;17&nbsp;ans</span>
-							</label>
-							<div class="d-flex flex-row">
-								<button type="button" class="btnPM">
-									<svg height="100%" role="img" viewBox="0 0 24 24" width="100%" >
-										<svg>
-											<path d="M19 13H5v-2h14v2z"></path>
-										</svg>
-									</svg>
-								</button>
-								<input type="text" id="child-input" min="0" max="6"  value="0">
-								<button type="button" class="btnPM" >
-									<svg height="100%" role="img" viewBox="0 0 24 24" width="100%">
-										<svg>
-											<path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
-										</svg>
-									</svg>
-								</button>
-							</div>
+						<div>
+							<button data-testid="add-room-button" class="btn btn-outline-secondary mb-2" type="button"> &#43; chambre</button>
 						</div>
-					</div>
+					</section>
 					<div>
-						<button data-testid="add-room-button" type="button">Ajouter une autre chambre</button>
+						<button data-testid="guests-done-button" class="btn btn-light mb-2" type="button">Terminer</br><span>(valeur)chambre, (valeur)voyageurs</span></button>
 					</div>
-					<div></div>
-				</section>
-				<div>
-					<button data-testid="guests-done-button" type="button">Terminer
-						<span>(valeur)chambre, (valeur)voyageurs</span>
-					</button>
 				</div>
 			</div>
-
+			<!-- <form action="" class="col-sm">
+				<div class="row">
+					<div class="small-12 column">
+						<div class="form-floating-label">
+							<input type="email" id="email" name="email" required>
+							<label for="email">Email float up</label>
+						</div>
+					</div>
+					<div class="small-12 column">
+						<div class="form-floating-label">
+							<input type="text" id="password" name="password">
+							<label for="password">Float password up</label>
+						</div>
+					</div>
+					<div class="small-12 column">
+						<div class="form-floating-label">
+							<input type="tel" id="tel" name="tel">
+							<label for="tel">Float phone up</label>
+						</div>
+					</div>
+					<div class="small-12 column">
+						<div class="form-floating-label">
+							<textarea name="" id="" rows="5" placeholder=""></textarea>
+							<label for="textarea">Float textarea up</label>
+						</div>
+					</div>
+				</div>
+			</form> -->
 		</div>
 
 
@@ -107,8 +84,12 @@
 
 
 
-		<!-- hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh -->
+
 	</div>
+
+
+
+
 </div>
 <script type="text/javascript">
 		var now = new Date();
@@ -121,6 +102,17 @@
 		document.getElementById('end-time').value = document.getElementById('start-time').value;
 		document.getElementById('end-time').min = document.getElementById('start-time').value;
 	}
+// 	$('.form-floating-label input, .form-floating-label textarea').focusin(function(){
+//   $(this).parent().addClass('has-value');
+// });
+
+// $('.form-floating-label input, .form-floating-label textarea').blur(function(){
+//   if(!$(this).val().length > 0) {
+//     $(this).parent().removeClass('has-value');
+//   }
+// });
+
+
 </script>
 
 <?php include('templates/footer.php'); ?>
